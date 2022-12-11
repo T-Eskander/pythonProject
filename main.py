@@ -47,7 +47,7 @@ while 1:
 
     if len(cnts) > 0:
         ball_cont = max(cnts, key=cv2.contourArea)
-        (x, y), radius = cv2.minEnclosingCircle(ball_cont)  # find the minimum enclosing circle about the found contour
+        (x, y), radius = cv2.minEnclosingCircle(ball_cont) 
 
         M = cv2.moments(ball_cont)
         center = (int(M['m10'] / M['m00']), int(M['m01'] / M['m00']))
